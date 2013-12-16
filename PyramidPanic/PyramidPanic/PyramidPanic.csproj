@@ -112,6 +112,7 @@
     <Compile Include="GameScenes\HelpScene\HelpScene.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
+    <Compile Include="GameScenes\QuitScene\QuitScene.cs" />
     <Compile Include="GameScenes\ScoreScene\ScoreScene.cs" />
     <Compile Include="GameScenes\StartScene\Input\Input.cs" />
     <Compile Include="GameScenes\StartScene\Menu.cs" />
