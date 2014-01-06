@@ -17,7 +17,7 @@ namespace PyramidPanic
         private PyramidPanic game;
 
         //Maak een variabele (reference) aan van de Menu class genaamd menu
-        private Menu menu;
+
 
         // Constructor van StartScene-class krijgt een object game mee van het type PyramidPanic
         public LoadScene(PyramidPanic game)
