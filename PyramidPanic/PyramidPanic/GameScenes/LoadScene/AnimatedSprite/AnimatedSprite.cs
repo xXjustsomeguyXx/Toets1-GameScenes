@@ -14,16 +14,16 @@ namespace PyramidPanic
     public class AnimatedSprite
     {
         //fields
-        private PyramidPanic game;
+        private Beetle beetle;
+        private Scorpion scorpion;
         protected Rectangle destinationRectangle, sourceRectangle;
         private float timer = 0f;
         protected SpriteEffects effect;
 
-        public AnimatedSprite(PyramidPanic game)
+        public AnimatedSprite(Beetle beetle)
         {
-            this.game = game;
+            this.beetle = beetle;
             this.sourceRectangle = new Rectangle(0, 0, 32, 32);
-            this.destinationRectangle = new Rectangle(100, 200, 32, 32);
             this.effect = SpriteEffects.None;
         }
 
@@ -47,16 +47,16 @@ namespace PyramidPanic
         }
 
         //Draw method van de animatedsprite class
-        public void Draw(GameTime gameTime, Texture2D texture)
+        public void Draw(GameTime gameTime)
         {
-            this.game.SpriteBatch.Draw(texture,
-                                       this.destinationRectangle,
-                                       this.sourceRectangle,
-                                       Color.White,
-                                       0f,
-                                       Vector2.Zero,
-                                       this.effect,
-                                       0f);
+            this.beetle.Game.SpriteBatch.Draw(this.beetle.Texture,
+                                              this.destinationRectangle,
+                                              this.sourceRectangle,
+                                              Color.White,
+                                              0f,
+                                              Vector2.Zero,
+                                              this.effect,
+                                              0f);
         }
     }
 }

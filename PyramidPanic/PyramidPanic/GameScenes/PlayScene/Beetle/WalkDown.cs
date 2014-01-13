@@ -13,29 +13,30 @@ namespace PyramidPanic
 {
     //dit is een toestands class (dus moet hij de interface interface implementeren)
     //Deze class belooft dan plechtig dat hij de methods uit de interface heeft (toepast)
-    public class WalkUp : AnimatedSprite, IEntityState
+    public class WalkDown : AnimatedSprite, IEntityState
     {
         //fields
         private Beetle beetle;
 
         //Constructor
-        public WalkUp(Beetle beetle) : base(beetle)
+        public WalkDown(Beetle beetle)
+            : base(beetle)
         {
             this.beetle = beetle;
+            this.effect = SpriteEffects.FlipVertically;
             this.destinationRectangle = new Rectangle((int)this.beetle.Position.X,
                                                       (int)this.beetle.Position.Y,
-                                                       32, 
+                                                       32,
                                                        32);
         }
 
         public new void Update(GameTime gameTime)
         {
-            if (this.beetle.Position.Y < 0)
+            if (this.beetle.Position.Y > 480 - 32)
             {
-                //breng de beetle in de toestand walkdown
-                this.beetle.State = new WalkDown(this.beetle);
+                this.beetle.State = new WalkUp(this.beetle);
             }
-            this.beetle.Position -= new Vector2(0f, this.beetle.Speed);
+            this.beetle.Position += new Vector2(0f, this.beetle.Speed);
             this.destinationRectangle.X = (int)this.beetle.Position.X;
             this.destinationRectangle.Y = (int)this.beetle.Position.Y;
             base.Update(gameTime);

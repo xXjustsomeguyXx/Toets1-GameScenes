@@ -13,31 +13,32 @@ namespace PyramidPanic
 {
     //dit is een toestands class (dus moet hij de interface interface implementeren)
     //Deze class belooft dan plechtig dat hij de methods uit de interface heeft (toepast)
-    public class WalkUp : AnimatedSprite, IEntityState
+    public class Walkright : AnimatedSprite, IEntityState
     {
         //fields
-        private Beetle beetle;
+        private Scorpion scorpion;
 
         //Constructor
-        public WalkUp(Beetle beetle) : base(beetle)
+        public WalkRight(Scorpion scorpion)
+            : base(beetle)
         {
-            this.beetle = beetle;
-            this.destinationRectangle = new Rectangle((int)this.beetle.Position.X,
-                                                      (int)this.beetle.Position.Y,
-                                                       32, 
+            this.scorpion = scorpion;
+            this.destinationRectangle = new Rectangle((int)this.scorpion.Position.X,
+                                                      (int)this.scorpion.Position.Y,
+                                                       32,
                                                        32);
         }
 
         public new void Update(GameTime gameTime)
         {
-            if (this.beetle.Position.Y < 0)
+            if (this.scorpion.Position.X < 0)
             {
                 //breng de beetle in de toestand walkdown
-                this.beetle.State = new WalkDown(this.beetle);
+                this.scorpion.State = new WalkLeft(this.scorpion);
             }
-            this.beetle.Position -= new Vector2(0f, this.beetle.Speed);
-            this.destinationRectangle.X = (int)this.beetle.Position.X;
-            this.destinationRectangle.Y = (int)this.beetle.Position.Y;
+            this.scorpion.Position -= new Vector2(this.scorpion.Speed, 0f);
+            this.destinationRectangle.X = (int)this.scorpion.Position.X;
+            this.destinationRectangle.Y = (int)this.scorpion.Position.Y;
             base.Update(gameTime);
         }
 
