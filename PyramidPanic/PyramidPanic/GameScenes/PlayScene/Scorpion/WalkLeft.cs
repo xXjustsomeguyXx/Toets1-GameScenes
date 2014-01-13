@@ -19,8 +19,7 @@ namespace PyramidPanic
         private Scorpion scorpion;
 
         //Constructor
-        public WalkLeft(Scorpion scorpion)
-            : base(beetle)
+        public WalkLeft(Scorpion scorpion) : base(scorpion)
         {
             this.scorpion = scorpion;
             this.effect = SpriteEffects.FlipHorizontally;
@@ -30,12 +29,19 @@ namespace PyramidPanic
                                                        32);
         }
 
+        public void initialize()
+        {
+            this.destinationRectangle.X = (int)this.scorpion.Position.X;
+            this.destinationRectangle.Y = (int)this.scorpion.Position.Y;
+        }
+
         public new void Update(GameTime gameTime)
         {
             if (this.scorpion.Position.X < 0)
             {
                 //breng de beetle in de toestand walkdown
                 this.scorpion.State = new WalkRight(this.scorpion);
+                this.scorpion.WalkLeft.initialize();
             }
             this.scorpion.Position -= new Vector2(this.scorpion.Speed, 0f);
             this.destinationRectangle.X = (int)this.scorpion.Position.X;

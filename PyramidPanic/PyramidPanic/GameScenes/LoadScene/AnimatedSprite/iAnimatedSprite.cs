@@ -13,6 +13,7 @@ namespace PyramidPanic
 {
    public interface iAnimatedSprite
     {
-
+       PyramidPanic Game { get; }
+       Texture2D Texture { get; }
     }
 }

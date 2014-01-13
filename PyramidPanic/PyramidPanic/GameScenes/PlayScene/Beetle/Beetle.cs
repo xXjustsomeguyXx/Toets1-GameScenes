@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-   public class Beetle 
+   public class Beetle : iAnimatedSprite
     {
        //Fields
         private PyramidPanic game;
@@ -19,8 +19,19 @@ namespace PyramidPanic
         private Texture2D texture;
         private int speed = 2;
         private Vector2 position;
+        private WalkUp walkUp;
+        private WalkDown walkDown;
 
         //Properties
+        public WalkUp WalkUp
+        {
+            get { return this.walkUp; }
+        }
+        public WalkDown WalkDown
+        {
+            get { return this.walkDown; }
+        }
+
         public IEntityState State
         {
             set { this.state = value; }
@@ -50,7 +61,9 @@ namespace PyramidPanic
             this.game = game;
             this.position = position;
             this.texture = game.Content.Load<Texture2D>(@"Beetle\Beetle");
-            this.state = new WalkUp(this);
+            this.walkUp = new WalkUp(this);
+            this.walkDown = new WalkDown(this);
+            this.state = this.WalkUp;
         }
         //update
         public void Update(GameTime gameTime)

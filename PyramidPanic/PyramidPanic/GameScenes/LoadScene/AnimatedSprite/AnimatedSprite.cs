@@ -14,15 +14,15 @@ namespace PyramidPanic
     public class AnimatedSprite
     {
         //fields
-        private Beetle beetle;
+        private iAnimatedSprite iAnimatedSprite;
         private Scorpion scorpion;
         protected Rectangle destinationRectangle, sourceRectangle;
         private float timer = 0f;
         protected SpriteEffects effect;
 
-        public AnimatedSprite(Beetle beetle)
+        public AnimatedSprite(iAnimatedSprite iAnimatedSprite)
         {
-            this.beetle = beetle;
+            this.iAnimatedSprite = iAnimatedSprite;
             this.sourceRectangle = new Rectangle(0, 0, 32, 32);
             this.effect = SpriteEffects.None;
         }
@@ -49,7 +49,7 @@ namespace PyramidPanic
         //Draw method van de animatedsprite class
         public void Draw(GameTime gameTime)
         {
-            this.beetle.Game.SpriteBatch.Draw(this.beetle.Texture,
+            this.iAnimatedSprite.Game.SpriteBatch.Draw(this.iAnimatedSprite.Texture,
                                               this.destinationRectangle,
                                               this.sourceRectangle,
                                               Color.White,

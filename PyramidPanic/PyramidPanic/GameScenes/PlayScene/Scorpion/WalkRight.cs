@@ -13,14 +13,13 @@ namespace PyramidPanic
 {
     //dit is een toestands class (dus moet hij de interface interface implementeren)
     //Deze class belooft dan plechtig dat hij de methods uit de interface heeft (toepast)
-    public class Walkright : AnimatedSprite, IEntityState
+    public class WalkRight : AnimatedSprite, IEntityState
     {
         //fields
         private Scorpion scorpion;
 
         //Constructor
-        public WalkRight(Scorpion scorpion)
-            : base(beetle)
+        public WalkRight(Scorpion scorpion) : base(scorpion)
         {
             this.scorpion = scorpion;
             this.destinationRectangle = new Rectangle((int)this.scorpion.Position.X,
@@ -28,15 +27,22 @@ namespace PyramidPanic
                                                        32,
                                                        32);
         }
+        public void initialize()
+        {
+            this.destinationRectangle.X = (int)this.scorpion.Position.X;
+            this.destinationRectangle.Y = (int)this.scorpion.Position.Y;
+        }
+
 
         public new void Update(GameTime gameTime)
         {
-            if (this.scorpion.Position.X < 0)
+            if (this.scorpion.Position.X > 640 - 32)
             {
                 //breng de beetle in de toestand walkdown
                 this.scorpion.State = new WalkLeft(this.scorpion);
+                this.scorpion.WalkRight.initialize();
             }
-            this.scorpion.Position -= new Vector2(this.scorpion.Speed, 0f);
+            this.scorpion.Position += new Vector2(this.scorpion.Speed, 0f);
             this.destinationRectangle.X = (int)this.scorpion.Position.X;
             this.destinationRectangle.Y = (int)this.scorpion.Position.Y;
             base.Update(gameTime);

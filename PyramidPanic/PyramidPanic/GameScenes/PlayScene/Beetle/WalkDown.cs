@@ -30,6 +30,11 @@ namespace PyramidPanic
                                                        32);
         }
 
+        public void initialize()
+        {
+            this.destinationRectangle.X = (int)this.beetle.Position.X;
+            this.destinationRectangle.Y = (int)this.beetle.Position.Y;
+        }
         public new void Update(GameTime gameTime)
         {
             if (this.beetle.Position.Y > 480 - 32)
