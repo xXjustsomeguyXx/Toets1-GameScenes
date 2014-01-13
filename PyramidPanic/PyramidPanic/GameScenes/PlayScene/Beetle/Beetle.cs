@@ -15,15 +15,24 @@ namespace PyramidPanic
     {
        //Fields
         private PyramidPanic game;
+        private IBeetleState state;
         private Texture2D texture;
         private int speed = -2;
 
         //Properties
+        public IBeetleState State
+        {
+            set { this.state = value; }
+        }
+
         public PyramidPanic Game
         {
             get { return this.game; }
         }
-
+        public int Speed
+        {
+            get { return this.speed; }
+        }
         public Texture2D Texture
         {
             get { return this.texture; }
