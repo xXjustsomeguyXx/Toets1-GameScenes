@@ -58,14 +58,11 @@ namespace PyramidPanic
             if (Input.EdgeDetectKeyUp(Keys.Down))
             {
                 this.explorer.State = this.explorer.Idle;
-                this.explorer.Idle.Initialize();
                 this.explorer.Idle.Effect = SpriteEffects.None;
                 this.explorer.Idle.Rotation = (float)Math.PI / 2;
             }
 
             this.explorer.Position += this.velocity;
-            this.destinationRectangle.X = (int)this.explorer.Position.X;
-            this.destinationRectangle.Y = (int)this.explorer.Position.Y;
             base.Update(gameTime);
         }
 

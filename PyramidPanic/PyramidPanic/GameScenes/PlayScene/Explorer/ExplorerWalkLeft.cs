@@ -53,16 +53,14 @@ namespace PyramidPanic
             }
 
             this.explorer.Position -= this.velocity;
-            this.destinationRectangle.X = (int)this.explorer.Position.X;
-            this.destinationRectangle.Y = (int)this.explorer.Position.Y;
 
             // Als de Right knop wordt losgelaten, dan moet de 
             // explorer weer in de toestand Idle komen
             if (Input.EdgeDetectKeyUp(Keys.Left))
             {
                 this.explorer.State = this.explorer.Idle;
-                this.explorer.Idle.Initialize();
                 this.explorer.Idle.Effect = SpriteEffects.FlipHorizontally;
+                this.explorer.Idle.Rotation = 0f;
             }
             base.Update(gameTime);
         }

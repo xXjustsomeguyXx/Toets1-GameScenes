@@ -21,6 +21,8 @@ namespace PyramidPanic
         protected SpriteEffects effect;
         protected int imageNumber = 1; //Loopt van 0 tm 3
         protected float rotation = 0f;
+        private Vector2 pivot;
+
 
         // De constructor
         public AnimatedSprite(IAnimatedSprite iAnimatedSprite)
@@ -28,6 +30,7 @@ namespace PyramidPanic
             this.iAnimatedSprite = iAnimatedSprite;
             this.sourceRectangle = new Rectangle(this.imageNumber * 32, 0, 32, 32);            
             this.effect = SpriteEffects.None;
+            this.pivot = new Vector2(16f, 16f);
         }
 
         //Update
@@ -57,7 +60,7 @@ namespace PyramidPanic
                                               this.sourceRectangle,
                                               Color.White,
                                               this.rotation,
-                                              Vector2.Zero,
+                                              this.pivot,
                                               this.effect,
                                               0f);              
         }
