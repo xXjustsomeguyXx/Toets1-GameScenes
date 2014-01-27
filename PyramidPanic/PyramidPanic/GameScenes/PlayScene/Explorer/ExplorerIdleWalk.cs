@@ -55,17 +55,23 @@ namespace PyramidPanic
         {
             //Bij het indrukken van de Right knop moet de toestand van de explorer veranderen in
             // ExplorerWalkRight
-            if (Input.LevelDetectKeyDown(Keys.Right))
+            if (Input.EdgeDetectKeyUp(Keys.Right))
             {
-                this.explorer.State = this.explorer.WalkRight;
+                this.explorer.State = this.explorer.Idle;
+                this.explorer.Idle.Effect = SpriteEffects.None;
+                this.explorer.Idle.Rotation = 0f;
             }
-            else if (Input.LevelDetectKeyDown(Keys.Left))
+            else if (Input.EdgeDetectKeyUp(Keys.Left))
             {
-                this.explorer.State = this.explorer.WalkLeft;
+                this.explorer.State = this.explorer.Idle;
+                this.explorer.Idle.Effect = SpriteEffects.None;
+                this.explorer.Idle.Rotation = 0f;
             }
-            else if (Input.LevelDetectKeyDown(Keys.Down))
+            else if (Input.EdgeDetectKeyUp(Keys.Down))
             {
-                this.explorer.State = this.explorer.WalkDown;
+                this.explorer.State = this.explorer.Idle;
+                this.explorer.Idle.Effect = SpriteEffects.None;
+                this.explorer.Idle.Rotation = (float)Math.PI / 2;
             }
             //zorgt voor de animatie. roept de update(GameTime gameTime) method aan van 
             // de animatedSprite class

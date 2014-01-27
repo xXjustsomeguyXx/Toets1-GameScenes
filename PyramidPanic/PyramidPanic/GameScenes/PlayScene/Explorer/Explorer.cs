@@ -54,7 +54,7 @@ namespace PyramidPanic
         }
         public ExplorerIdleWalk IdleWalk
         {
-            get { return this.idelWalk}
+            get { return this.idelWalk; }
         }
         public Vector2 Position
         {
