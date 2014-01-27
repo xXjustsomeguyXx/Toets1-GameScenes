@@ -43,10 +43,10 @@ namespace PyramidPanic
             // kan lopen.
             this.explorer.Position -= this.velocity;
 
-            if (this.explorer.Position.Y > 480 - 16)
+            if (this.explorer.Position.Y  < 16)
             {
                 //Breng de explorer in de toestand Idle
-                this.explorer.Position -= this.velocity;
+                this.explorer.Position += this.velocity;
                 this.explorer.State = this.explorer.IdleWalk;
                 this.explorer.IdleWalk.Effect = SpriteEffects.None;
                 this.explorer.IdleWalk.Rotation = -(float)Math.PI / 2;

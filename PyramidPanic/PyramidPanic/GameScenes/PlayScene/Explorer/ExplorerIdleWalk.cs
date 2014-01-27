@@ -73,6 +73,12 @@ namespace PyramidPanic
                 this.explorer.Idle.Effect = SpriteEffects.None;
                 this.explorer.Idle.Rotation = (float)Math.PI / 2;
             }
+            else if (Input.EdgeDetectKeyUp(Keys.Up))
+            {
+                this.explorer.State = this.explorer.Idle;
+                this.explorer.Idle.Effect = SpriteEffects.FlipVertically;
+                this.explorer.Idle.Rotation = -(float)Math.PI / 2;
+            }
             //zorgt voor de animatie. roept de update(GameTime gameTime) method aan van 
             // de animatedSprite class
             base.Update(gameTime);
