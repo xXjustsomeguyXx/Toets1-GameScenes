@@ -19,12 +19,14 @@ namespace PyramidPanic
         protected Rectangle destinationRectangle, sourceRectangle;
         private float timer = 0f;
         protected SpriteEffects effect;
+        private Vector2 pivot;
 
         public AnimatedSprite(iAnimatedSprite iAnimatedSprite)
         {
             this.iAnimatedSprite = iAnimatedSprite;
             this.sourceRectangle = new Rectangle(0, 0, 32, 32);
             this.effect = SpriteEffects.None;
+            this.pivot = new Vector2(16f, 16);
         }
 
         //update
@@ -54,7 +56,7 @@ namespace PyramidPanic
                                               this.sourceRectangle,
                                               Color.White,
                                               0f,
-                                              Vector2.Zero,
+                                              this.pivot,
                                               this.effect,
                                               0f);
         }
