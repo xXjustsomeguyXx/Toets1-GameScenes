@@ -12,25 +12,23 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    // Dit is een toestands class (dus moet hij de interface implementeren)
-    // Deze class belooft dan plechtig dat hij de methods uit de interface heeft (toepast)
-    
-    public class ExplorerWalkLeft : AnimatedSprite, IEntityState
+    public class ExplorerWalkUp : AnimatedSprite, IEntityState
     {
         //Fields
+        private ExplorerWalkUp walkUp;
         private Explorer explorer;
         private Vector2 velocity;
 
         //Contstructor
-        public ExplorerWalkLeft(Explorer explorer) : base(explorer)
+        public ExplorerWalkUp(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
             this.destinationRectangle = new Rectangle((int)this.explorer.Position.X,
                                                       (int)this.explorer.Position.Y,
                                                       32,
                                                       32);
-            this.velocity = new Vector2(this.explorer.Speed, 0f);
-            this.effect = SpriteEffects.FlipHorizontally;
+            this.velocity = new Vector2(0f, this.explorer.Speed);
+            this.rotation = -(float)Math.PI / 2;
         }
 
         public void Initialize()
@@ -45,22 +43,23 @@ namespace PyramidPanic
             // kan lopen.
             this.explorer.Position -= this.velocity;
 
-            if (this.explorer.Position.X < 16 )
+            if (this.explorer.Position.Y > 480 - 16)
             {
                 //Breng de explorer in de toestand Idle
-                this.explorer.Position += this.velocity;
+                this.explorer.Position -= this.velocity;
                 this.explorer.State = this.explorer.IdleWalk;
-                this.explorer.IdleWalk.Effect = SpriteEffects.FlipHorizontally;
-                this.explorer.IdleWalk.Rotation = 0f;
+                this.explorer.IdleWalk.Effect = SpriteEffects.None;
+                this.explorer.IdleWalk.Rotation = -(float)Math.PI / 2;
             }
+            
 
             // Als de Right knop wordt losgelaten, dan moet de 
             // explorer weer in de toestand Idle komen
-            if (Input.EdgeDetectKeyUp(Keys.Left))
+            if (Input.EdgeDetectKeyUp(Keys.Up))
             {
                 this.explorer.State = this.explorer.Idle;
-                this.explorer.Idle.Effect = SpriteEffects.FlipHorizontally;
-                this.explorer.Idle.Rotation = 0f;
+                this.explorer.Idle.Effect = SpriteEffects.None;
+                this.explorer.Idle.Rotation = -(float)Math.PI / 2;
             }
             base.Update(gameTime);
         }

@@ -64,7 +64,7 @@ namespace PyramidPanic
             else if (Input.EdgeDetectKeyUp(Keys.Left))
             {
                 this.explorer.State = this.explorer.Idle;
-                this.explorer.Idle.Effect = SpriteEffects.None;
+                this.explorer.Idle.Effect = SpriteEffects.FlipHorizontally;
                 this.explorer.Idle.Rotation = 0f;
             }
             else if (Input.EdgeDetectKeyUp(Keys.Down))

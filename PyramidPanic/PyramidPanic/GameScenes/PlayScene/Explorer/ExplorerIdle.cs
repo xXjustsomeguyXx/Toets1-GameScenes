@@ -55,6 +55,11 @@ namespace PyramidPanic
         {
             //Bij het indrukken van de Right knop moet de toestand van de explorer veranderen in
             // ExplorerWalkRight
+            if (Input.LevelDetectKeyDown(Keys.Up))
+            {
+                this.explorer.State = this.explorer.WalkUp;
+                this.explorer.WalkUp.Initialize();
+            }
             if (Input.LevelDetectKeyDown(Keys.Right))
             {
                 this.explorer.State = this.explorer.WalkRight;
