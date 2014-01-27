@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{56F487A8-CAD4-49C6-B2F2-EF84D9F9A840}</ProjectGuid>
+    <ProjectGuid>{B7424432-0B17-45A3-95F2-A889A0D3B764}</ProjectGuid>
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -14,7 +14,7 @@
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
     <XnaPlatform>Windows</XnaPlatform>
     <XnaProfile>HiDef</XnaProfile>
-    <XnaCrossPlatformGroupID>d55c051e-3f9d-429c-a8c1-0a219957414e</XnaCrossPlatformGroupID>
+    <XnaCrossPlatformGroupID>2a1846b3-d4f1-4f1e-bd34-f4c7dc891535</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>pyramid.ico</ApplicationIcon>
     <Thumbnail>
@@ -108,29 +108,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameScenes\AnimatedSprite\AnimatedSprite.cs" />
+    <Compile Include="GameScenes\AnimatedSprite\IAnimatedSprite.cs" />
     <Compile Include="GameScenes\GameOverScene\GameOverScene.cs" />
     <Compile Include="GameScenes\HelpScene\HelpScene.cs" />
-    <Compile Include="GameScenes\LoadScene\AnimatedSprite\AnimatedSprite.cs" />
-    <Compile Include="GameScenes\LoadScene\AnimatedSprite\iAnimatedSprite.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\Beetle.cs" />
-    <Compile Include="GameScenes\PlayScene\Beetle\IBeetleState.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\WalkDown.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\ExplorerWalkDown.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\ExplorerWalkLeft.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\ExplorerIdle.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\Explorer.cs" />
+    <Compile Include="GameScenes\PlayScene\Explorer\ExplorerWalkRight.cs" />
+    <Compile Include="GameScenes\PlayScene\IEntityState.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\WalkUp.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
+    <Compile Include="GameScenes\PlayScene\Scorpion\WalkRight.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\Scorpion.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkLeft.cs" />
-    <Compile Include="GameScenes\PlayScene\Scorpion\WalkRight.cs" />
     <Compile Include="GameScenes\QuitScene\QuitScene.cs" />
-    <Compile Include="GameScenes\ScoreScene\ScoreScene.cs" />
-    <Compile Include="GameScenes\StartScene\Input\Input.cs" />
     <Compile Include="GameScenes\StartScene\Menu.cs" />
+    <Compile Include="GameScenes\StartScene\StartScene.cs" />
     <Compile Include="Game\IState.cs" />
     <Compile Include="HelperClass\Image.cs" />
+    <Compile Include="Input\Input.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Game\PyramidPanic.cs" />
-    <Compile Include="GameScenes\StartScene\StartScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="pyramid.ico" />
@@ -168,9 +172,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GameScenes\PlayScene\Explorder\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--

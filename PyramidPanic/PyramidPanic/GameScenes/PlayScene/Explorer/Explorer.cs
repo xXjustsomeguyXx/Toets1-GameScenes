@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class Scorpion : IAnimatedSprite
+    public class Explorer : IAnimatedSprite
     {
         //Fields
         private PyramidPanic game;
@@ -20,18 +20,36 @@ namespace PyramidPanic
         private Texture2D texture;
         private int speed = 2;
         private Vector2 position;
-        private WalkLeft walkLeft;
-        private WalkRight walkRight;
 
+        //Maak van iedere toestand (state) een field
+        //private ExplorerWalkUp walkUp;
+        private ExplorerWalkDown walkDown;
+        private ExplorerWalkLeft walkLeft;
+        private ExplorerWalkRight walkRight;
+        private ExplorerIdle idle;
 
         //properties
-        public WalkLeft WalkLeft
+        /*
+        public ExplorerWalkUp WalkUp
+        {
+            get { return this.walkUp; }
+        }
+        */
+        public ExplorerWalkDown WalkDown
+        {
+            get { return this.walkDown; }
+        }
+        public ExplorerWalkLeft WalkLeft
         {
             get { return this.walkLeft; }
         }
-        public WalkRight WalkRight
+        public ExplorerWalkRight WalkRight
         {
-            get { return this.walkRight; }
+            get { return this.walkRight;}
+        }
+        public ExplorerIdle Idle
+        {
+            get { return this.idle; }
         }
         public Vector2 Position
         {
@@ -56,14 +74,17 @@ namespace PyramidPanic
         }
         
         //Constructor
-        public Scorpion(PyramidPanic game, Vector2 position)
+        public Explorer(PyramidPanic game, Vector2 position)
         {
             this.game = game;
             this.position = position;
-            this.texture = game.Content.Load<Texture2D>(@"Scorpion\Scorpion");
-            this.walkLeft = new WalkLeft(this);
-            this.walkRight = new WalkRight(this);
-            this.state = this.walkLeft;
+            this.texture = game.Content.Load<Texture2D>(@"Explorer\Explorer");
+            //this.walkUp = new ExplorerWalkUp(this);
+            this.walkDown = new ExplorerWalkDown(this);
+            this.walkLeft = new ExplorerWalkLeft(this);
+            this.walkRight = new ExplorerWalkRight(this);
+            this.idle = new ExplorerIdle(this);
+            this.state = this.idle;
         }
 
         //Update

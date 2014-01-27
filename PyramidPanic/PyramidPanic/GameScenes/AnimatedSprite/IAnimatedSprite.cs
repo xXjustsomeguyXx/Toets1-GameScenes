@@ -12,9 +12,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public interface IState
+    public interface IAnimatedSprite
     {
-        void Update(GameTime gameTime);
-        void Draw(GameTime gameTime);
+        PyramidPanic Game { get; }
+        Texture2D Texture { get; }
     }
 }

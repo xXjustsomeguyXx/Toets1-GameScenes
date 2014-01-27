@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Met using kan je een XNA codebibliotheek toevoegen en gebruiken in je class
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -11,18 +12,20 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-   public class Beetle : iAnimatedSprite
+    public class Beetle : IAnimatedSprite
     {
-       //Fields
+        //Fields
         private PyramidPanic game;
         private IEntityState state;
         private Texture2D texture;
         private int speed = 2;
         private Vector2 position;
+
+        //Maak van iedere toestand (state) een field
         private WalkUp walkUp;
         private WalkDown walkDown;
 
-        //Properties
+        //properties
         public WalkUp WalkUp
         {
             get { return this.walkUp; }
@@ -31,12 +34,15 @@ namespace PyramidPanic
         {
             get { return this.walkDown; }
         }
-
+        public Vector2 Position
+        {
+            get { return this.position; }
+            set { this.position = value; }
+        }
         public IEntityState State
         {
             set { this.state = value; }
         }
-
         public PyramidPanic Game
         {
             get { return this.game; }
@@ -49,12 +55,7 @@ namespace PyramidPanic
         {
             get { return this.texture; }
         }
-        public Vector2 Position
-        {
-            get { return this.position; }
-            set { this.position = value; }
-        }
-
+        
         //Constructor
         public Beetle(PyramidPanic game, Vector2 position)
         {
@@ -63,20 +64,19 @@ namespace PyramidPanic
             this.texture = game.Content.Load<Texture2D>(@"Beetle\Beetle");
             this.walkUp = new WalkUp(this);
             this.walkDown = new WalkDown(this);
-            this.state = this.WalkUp;
+            this.state = this.walkUp;
         }
-        //update
+
+        //Update
         public void Update(GameTime gameTime)
         {
-            this.state.Update(gameTime);
+           this.state.Update(gameTime);
         }
 
-
         //Draw
-
         public void Draw(GameTime gameTime)
         {
-            this.state.Draw(gameTime);
+            this.state.Draw(gameTime);                   
         }
     }
 }
