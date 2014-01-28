@@ -17,11 +17,11 @@ namespace PyramidPanic
     
     public class WalkDown : AnimatedSprite, IEntityState
     {
-        //Fields
+        //Fields methode Van de walkdown class
         private Beetle beetle;
         private Vector2 velocity;
 
-        //Contstructor
+        //Contstructor methode van de walkdown class
         public WalkDown(Beetle beetle) : base(beetle)
         {
             this.beetle = beetle;
@@ -32,17 +32,18 @@ namespace PyramidPanic
                                                       32);
             this.velocity = new Vector2(0f, this.beetle.Speed);
         }
-
+        // de initialize methode van de Walkdown class
         public void Initialize()
         {
             this.destinationRectangle.X = (int)this.beetle.Position.X;
             this.destinationRectangle.Y = (int)this.beetle.Position.Y;
         }
-
+        // Update methode van de WalkDown class
         public new void Update(GameTime gameTime)
         {
             if (this.beetle.Position.Y > 480 - 32)
             {
+                // Brengt de beetle in de walkUp class.
                 this.beetle.State = new WalkUp(this.beetle);
                 this.beetle.WalkUp.Initialize();
             }
@@ -52,7 +53,7 @@ namespace PyramidPanic
             base.Update(gameTime);
         }
 
-
+        // Draw methode van de Walkdownclass
         public new void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
