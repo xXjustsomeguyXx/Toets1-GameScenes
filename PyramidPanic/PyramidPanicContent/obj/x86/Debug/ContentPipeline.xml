@@ -91,6 +91,60 @@
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Explorer\Explorer.xnb</Output>
       <Time>2014-01-27T00:09:56+01:00</Time>
     </Item>
+    <Item>
+      <Source>Block\Block.png</Source>
+      <Name>Block\Block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block.xnb</Output>
+      <Time>2014-01-27T14:57:12.1480595+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Block\Block_hor.png</Source>
+      <Name>Block\Block_hor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block_hor.xnb</Output>
+      <Time>2014-01-27T14:57:18.3671257+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Block\Block_vert.png</Source>
+      <Name>Block\Block_vert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block_vert.xnb</Output>
+      <Time>2014-01-27T14:57:21.8360512+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Block\Door.png</Source>
+      <Name>Block\Door</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Door.xnb</Output>
+      <Time>2014-01-27T14:57:34.8523366+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Block\Wall1.png</Source>
+      <Name>Block\Wall1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Wall1.xnb</Output>
+      <Time>2014-01-27T14:57:44.5247019+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Block\Wall2.png</Source>
+      <Name>Block\Wall2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Wall2.xnb</Output>
+      <Time>2014-01-27T14:57:54.7595968+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

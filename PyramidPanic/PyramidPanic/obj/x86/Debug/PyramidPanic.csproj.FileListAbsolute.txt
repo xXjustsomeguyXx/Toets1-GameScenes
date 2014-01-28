@@ -14,3 +14,9 @@ C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.exe
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.pdb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block_hor.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block_vert.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Door.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Wall1.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Wall2.xnb

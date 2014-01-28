@@ -8,3 +8,9 @@ Content\StartScene\Button_start.xnb
 Content\Scorpion\Scorpion.xnb
 Content\Beetle\Beetle.xnb
 Content\Explorer\Explorer.xnb
+Content\Block\Block.xnb
+Content\Block\Block_hor.xnb
+Content\Block\Block_vert.xnb
+Content\Block\Door.xnb
+Content\Block\Wall1.xnb
+Content\Block\Wall2.xnb
