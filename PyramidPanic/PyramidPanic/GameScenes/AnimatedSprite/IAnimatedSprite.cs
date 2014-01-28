@@ -14,6 +14,8 @@ namespace PyramidPanic
 {
     public interface IAnimatedSprite
     {
+        // 2 getters gemaakt van de PyramidPanic Class en de Texture2D
+        // In de IAnimatedSprite
         PyramidPanic Game { get; }
         Texture2D Texture { get; }
     }

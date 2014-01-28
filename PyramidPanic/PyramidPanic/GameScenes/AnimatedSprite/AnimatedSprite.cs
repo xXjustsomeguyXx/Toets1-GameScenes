@@ -14,7 +14,7 @@ namespace PyramidPanic
 {
     public class AnimatedSprite
     {
-        //Fields
+        //Fields van de AnimatedSprite class
         private IAnimatedSprite iAnimatedSprite;
         protected Rectangle destinationRectangle, sourceRectangle;
         private float timer = 0f;
@@ -24,7 +24,7 @@ namespace PyramidPanic
         private Vector2 pivot;
 
 
-        // De constructor
+        // De constructor van de AnimatedSprite class
         public AnimatedSprite(IAnimatedSprite iAnimatedSprite)
         {
             this.iAnimatedSprite = iAnimatedSprite;
@@ -33,7 +33,7 @@ namespace PyramidPanic
             this.pivot = new Vector2(16f, 16f);
         }
 
-        //Update
+        //Update methode van de AnimatedSprite class
         public void Update(GameTime gameTime)
         {
             if (this.timer > 5 / 60f)
