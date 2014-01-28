@@ -17,23 +17,25 @@ namespace PyramidPanic
     
     public class ExplorerIdleWalk : AnimatedSprite, IEntityState
     {
-        //Fields
+        //Fields methode van de ExploreridleWalk class
         private Explorer explorer;
         private Vector2 velocity;
         private int imageNumber = 1;
        
-        //properties
+        //properties methode van de ExploreridleWalk class
         public SpriteEffects Effect
         {
+            //Setter van de SpriteEffects
             set { this.effect = value; }
         }
 
         public float Rotation
         {
+            // Setter van de Float
             set { this.rotation = value; }
         }
 
-        //Constructor
+        //Constructor methode van de explorerIdleWalk
         public ExplorerIdleWalk(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
@@ -45,12 +47,14 @@ namespace PyramidPanic
             this.velocity = new Vector2(0f, 0f);
         }
 
+        //Initialize methode van de explorerIdleWalk
         public void Initialize()
         {
             this.destinationRectangle.X = (int)this.explorer.Position.X;
             this.destinationRectangle.Y = (int)this.explorer.Position.Y;
         }
 
+        //Update methode van de explorerIdleWalk
         public new void Update(GameTime gameTime)
         {
             //Bij het indrukken van de Right knop moet de toestand van de explorer veranderen in
@@ -84,7 +88,7 @@ namespace PyramidPanic
             base.Update(gameTime);
         }
 
-
+        //Draw methode van de explorerIdleWalk
         public new void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
