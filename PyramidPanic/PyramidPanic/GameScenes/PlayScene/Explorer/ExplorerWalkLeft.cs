@@ -17,11 +17,11 @@ namespace PyramidPanic
     
     public class ExplorerWalkLeft : AnimatedSprite, IEntityState
     {
-        //Fields
+        //Fields methode van de explorerWalkLeft
         private Explorer explorer;
         private Vector2 velocity;
 
-        //Contstructor
+        //Contstructor methode van de explorerWalkLeft
         public ExplorerWalkLeft(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
@@ -32,13 +32,14 @@ namespace PyramidPanic
             this.velocity = new Vector2(this.explorer.Speed, 0f);
             this.effect = SpriteEffects.FlipHorizontally;
         }
-
+        //Initialize methode van de explorerWalkLeft
         public void Initialize()
         {
             this.destinationRectangle.X = (int)this.explorer.Position.X;
             this.destinationRectangle.Y = (int)this.explorer.Position.Y;
         }
 
+        //Update methode van de explorerWalkLeft
         public new void Update(GameTime gameTime)
         {
             // Deze code zorgt ervoor dat de explorer niet buiten de rechterrand
@@ -65,7 +66,7 @@ namespace PyramidPanic
             base.Update(gameTime);
         }
 
-
+        // Draw methode van de explorerWalkLeft
         public new void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
