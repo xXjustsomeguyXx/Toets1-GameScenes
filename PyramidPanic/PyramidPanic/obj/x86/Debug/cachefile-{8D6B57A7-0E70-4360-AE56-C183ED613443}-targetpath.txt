@@ -14,3 +14,12 @@ Content\Block\Block_vert.xnb
 Content\Block\Door.xnb
 Content\Block\Wall1.xnb
 Content\Block\Wall2.xnb
+Content\Block\Transparant.xnb
+Content\Background\Background.xnb
+Content\Background\Background2.xnb
+Content\Treasures\Ankh.xnb
+Content\Treasures\Cat.xnb
+Content\Treasures\Scarab.xnb
+Content\Treasures\Potion.xnb
+Content\Scorpion\CollisionText.xnb
+Content\Level\0.txt

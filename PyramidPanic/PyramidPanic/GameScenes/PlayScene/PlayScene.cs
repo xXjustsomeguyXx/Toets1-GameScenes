@@ -15,11 +15,8 @@ namespace PyramidPanic
     public class PlayScene : IState
     {
         //Fields van de class PlayScene
-        private PyramidPanic game;
-        private Beetle beetle, beetle1;
-        private Scorpion scorpion, scorpion1;
-        private Explorer explorer;
-        private Block block1, block2, block3;
+        private PyramidPanic game;      
+        private Level level;
 
         // Constructor van de StartScene-class krijgt een object game mee van het type PyramidPanic
         public PlayScene(PyramidPanic game)
@@ -39,15 +36,7 @@ namespace PyramidPanic
         // classes.
         public void LoadContent()
         {
-            this.beetle = new Beetle(this.game, new Vector2(100f, 300f));
-            this.beetle1 = new Beetle(this.game, new Vector2(400f, 100f));
-            this.scorpion = new Scorpion(this.game, new Vector2(300f, 188f));
-            this.scorpion1 = new Scorpion(this.game, new Vector2(188f, 300f));
-            this.explorer = new Explorer(this.game, new Vector2(304f, 240f));
-            this.block1 = new Block(this.game, @"Block\Block", new Vector2(0f, 0f));
-            this.block2 = new Block(this.game, @"Block\Block_hor", new Vector2(200f, 200f));
-            this.block3 = new Block(this.game, @"Block\Block_vert", new Vector2(100f, 100f));
-
+            this.level = new Level(this.game, 0);
         }
 
         // Update methode. Deze methode wordt normaal 60 maal per seconde aangeroepen.
@@ -58,11 +47,8 @@ namespace PyramidPanic
             {
                 this.game.IState = this.game.StartScene;
             }
-            this.beetle.Update(gameTime);
-            this.beetle1.Update(gameTime);
-            this.scorpion.Update(gameTime);
-            this.scorpion1.Update(gameTime);
-            this.explorer.Update(gameTime);
+            // Roep de Update-method aan van de Level-class
+            this.level.Update(gameTime);                      
         }
 
         // Draw methode. Deze methode wordt normaal 60 maal per seconde aangeroepen en
@@ -70,14 +56,7 @@ namespace PyramidPanic
         public void Draw(GameTime gameTime)
         {
             this.game.GraphicsDevice.Clear(Color.Pink);
-            this.beetle.Draw(gameTime);
-            this.beetle1.Draw(gameTime);
-            this.scorpion.Draw(gameTime);
-            this.scorpion1.Draw(gameTime);
-            this.explorer.Draw(gameTime);
-            this.block1.Draw(gameTime);
-            this.block2.Draw(gameTime);
-            this.block3.Draw(gameTime);
+            this.level.Draw(gameTime);
         }
     }
 }

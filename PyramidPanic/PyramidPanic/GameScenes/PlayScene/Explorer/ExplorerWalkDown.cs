@@ -17,11 +17,11 @@ namespace PyramidPanic
     
     public class ExplorerWalkDown : AnimatedSprite, IEntityState
     {
-        //Fields methode van de explorerWalkDown
+        //Fields
         private Explorer explorer;
         private Vector2 velocity;
 
-        //Contstructor methode van de explorerWalkDown
+        //Contstructor
         public ExplorerWalkDown(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
@@ -32,13 +32,13 @@ namespace PyramidPanic
             this.velocity = new Vector2(0f, this.explorer.Speed);
             this.rotation = (float)Math.PI / 2;
         }
-        //Initialize methode van de explorerWalkDown
+
         public void Initialize()
         {
             this.destinationRectangle.X = (int)this.explorer.Position.X;
             this.destinationRectangle.Y = (int)this.explorer.Position.Y;
         }
-        //Update methode van de explorerWalkDown
+
         public new void Update(GameTime gameTime)
         {
             // Deze code zorgt ervoor dat de explorer niet buiten de rechterrand
@@ -52,6 +52,7 @@ namespace PyramidPanic
                 this.explorer.State = this.explorer.IdleWalk;
                 this.explorer.IdleWalk.Effect = SpriteEffects.None;
                 this.explorer.IdleWalk.Rotation = (float)Math.PI / 2;
+                
             }
             
 
@@ -63,10 +64,12 @@ namespace PyramidPanic
                 this.explorer.Idle.Effect = SpriteEffects.None;
                 this.explorer.Idle.Rotation = (float)Math.PI / 2;
             }
+
+            
             base.Update(gameTime);
         }
 
-        //Draw methode van de explorerWalkDown
+
         public new void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);

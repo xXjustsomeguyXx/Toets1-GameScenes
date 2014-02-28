@@ -41,7 +41,7 @@ namespace PyramidPanic
 
         public new void Update(GameTime gameTime)
         {
-            if (this.scorpion.Position.X < 0)
+            if (this.scorpion.Position.X < this.scorpion.LeftBorder)
             {
                 //Breng de beetle in de toestand walkdown
                 this.scorpion.State = this.scorpion.WalkRight;

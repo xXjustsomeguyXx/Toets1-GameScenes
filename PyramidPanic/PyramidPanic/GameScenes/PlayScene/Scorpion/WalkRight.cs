@@ -21,6 +21,11 @@ namespace PyramidPanic
         private Scorpion scorpion;
         private Vector2 velocity;
 
+        public Rectangle DestinationRect
+        {
+            get { return this.destinationRectangle; }
+        }
+
         //Contstructor
         public WalkRight(Scorpion scorpion) : base(scorpion)
         {
@@ -40,7 +45,7 @@ namespace PyramidPanic
 
         public new void Update(GameTime gameTime)
         {
-            if (this.scorpion.Position.X > 640 - 32)
+            if (this.scorpion.Position.X > this.scorpion.RightBorder)
             {
                 //Breng de beetle in de toestand walkdown
                 this.scorpion.State = this.scorpion.WalkLeft;

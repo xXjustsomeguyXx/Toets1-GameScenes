@@ -22,9 +22,31 @@ namespace PyramidPanic
         private Vector2 position;
         private WalkLeft walkLeft;
         private WalkRight walkRight;
+        private int rightBorder;
+        private int leftBorder;
+        private Rectangle collisionRect;
+        private Texture2D colText;
 
 
         //properties
+        public int RightBorder
+        {
+            get { return this.rightBorder; }
+            set { this.rightBorder = value; }
+        }
+        public int LeftBorder
+        {
+            get { return this.leftBorder; }
+            set { this.leftBorder = value; }
+        }
+        public Rectangle CollisionRect
+        {
+            get {
+                    this.collisionRect.X = (int)this.position.X - 16;
+                    this.collisionRect.Y = (int)this.position.Y - 16;
+                    return this.collisionRect;
+                }
+        }
         public WalkLeft WalkLeft
         {
             get { return this.walkLeft; }
@@ -60,10 +82,15 @@ namespace PyramidPanic
         {
             this.game = game;
             this.position = position;
+            this.collisionRect = new Rectangle((int)this.position.X - 16,
+                                               (int)this.position.Y - 16,
+                                               32,
+                                               32);
+            this.colText = game.Content.Load<Texture2D>(@"Scorpion\CollisionText");
             this.texture = game.Content.Load<Texture2D>(@"Scorpion\Scorpion");
             this.walkLeft = new WalkLeft(this);
             this.walkRight = new WalkRight(this);
-            this.state = this.walkLeft;
+            this.state = this.walkRight;
         }
 
         //Update
@@ -75,7 +102,9 @@ namespace PyramidPanic
         //Draw
         public void Draw(GameTime gameTime)
         {
-            this.state.Draw(gameTime);                   
+           // this.game.SpriteBatch.Draw(this.colText, this.CollisionRect, Color.Black); 
+            this.state.Draw(gameTime);
+                
         }
     }
 }

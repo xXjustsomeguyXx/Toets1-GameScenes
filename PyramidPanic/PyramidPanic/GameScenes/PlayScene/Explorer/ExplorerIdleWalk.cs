@@ -17,25 +17,23 @@ namespace PyramidPanic
     
     public class ExplorerIdleWalk : AnimatedSprite, IEntityState
     {
-        //Fields methode van de ExploreridleWalk class
+        //Fields
         private Explorer explorer;
         private Vector2 velocity;
         private int imageNumber = 1;
        
-        //properties methode van de ExploreridleWalk class
+        //properties
         public SpriteEffects Effect
         {
-            //Setter van de SpriteEffects
             set { this.effect = value; }
         }
 
         public float Rotation
         {
-            // Setter van de Float
             set { this.rotation = value; }
         }
 
-        //Constructor methode van de explorerIdleWalk
+        //Constructor
         public ExplorerIdleWalk(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
@@ -47,14 +45,12 @@ namespace PyramidPanic
             this.velocity = new Vector2(0f, 0f);
         }
 
-        //Initialize methode van de explorerIdleWalk
         public void Initialize()
         {
             this.destinationRectangle.X = (int)this.explorer.Position.X;
             this.destinationRectangle.Y = (int)this.explorer.Position.Y;
         }
 
-        //Update methode van de explorerIdleWalk
         public new void Update(GameTime gameTime)
         {
             //Bij het indrukken van de Right knop moet de toestand van de explorer veranderen in
@@ -80,15 +76,16 @@ namespace PyramidPanic
             else if (Input.EdgeDetectKeyUp(Keys.Up))
             {
                 this.explorer.State = this.explorer.Idle;
-                this.explorer.Idle.Effect = SpriteEffects.FlipVertically;
-                this.explorer.Idle.Rotation = -(float)Math.PI / 2;
+                this.explorer.Idle.Effect = SpriteEffects.FlipHorizontally;
+                this.explorer.Idle.Rotation = (float)Math.PI / 2;
             }
-            //zorgt voor de animatie. roept de update(GameTime gameTime) method aan van 
-            // de animatedSprite class
+           
+            // Zorgt voor de animatie. Roept de Update(GameTime gameTim) method aan van 
+            // de AnimatedSprite class
             base.Update(gameTime);
         }
 
-        //Draw methode van de explorerIdleWalk
+
         public new void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);

@@ -12,14 +12,16 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
+    // Dit is een toestands class (dus moet hij de interface implementeren)
+    // Deze class belooft dan plechtig dat hij de methods uit de interface heeft (toepast)
+    
     public class ExplorerWalkUp : AnimatedSprite, IEntityState
     {
-        //Fields methode van de explorerWalkUp
-        private ExplorerWalkUp walkUp;
+        //Fields
         private Explorer explorer;
         private Vector2 velocity;
 
-        //Contstructor methode van de explorerWalkUp
+        //Contstructor
         public ExplorerWalkUp(Explorer explorer) : base(explorer)
         {
             this.explorer = explorer;
@@ -28,28 +30,29 @@ namespace PyramidPanic
                                                       32,
                                                       32);
             this.velocity = new Vector2(0f, this.explorer.Speed);
-            this.rotation = -(float)Math.PI / 2;
+            this.effect = SpriteEffects.FlipHorizontally;
+            this.rotation = (float)Math.PI / 2;
         }
-        //Initialize methode van de explorerWalkUp
+
         public void Initialize()
         {
             this.destinationRectangle.X = (int)this.explorer.Position.X;
             this.destinationRectangle.Y = (int)this.explorer.Position.Y;
         }
-        //Update methode van de explorerWalkUp
+
         public new void Update(GameTime gameTime)
         {
             // Deze code zorgt ervoor dat de explorer niet buiten de rechterrand
             // kan lopen.
             this.explorer.Position -= this.velocity;
 
-            if (this.explorer.Position.Y  < 16)
+            if (this.explorer.Position.Y < 15)
             {
                 //Breng de explorer in de toestand Idle
                 this.explorer.Position += this.velocity;
                 this.explorer.State = this.explorer.IdleWalk;
-                this.explorer.IdleWalk.Effect = SpriteEffects.None;
-                this.explorer.IdleWalk.Rotation = -(float)Math.PI / 2;
+                this.explorer.IdleWalk.Rotation = (float)Math.PI / 2;
+                this.explorer.IdleWalk.Effect = SpriteEffects.FlipHorizontally;                
             }
             
 
@@ -58,13 +61,15 @@ namespace PyramidPanic
             if (Input.EdgeDetectKeyUp(Keys.Up))
             {
                 this.explorer.State = this.explorer.Idle;
-                this.explorer.Idle.Effect = SpriteEffects.None;
-                this.explorer.Idle.Rotation = -(float)Math.PI / 2;
+                this.explorer.Idle.Effect = SpriteEffects.FlipHorizontally;
+                this.explorer.Idle.Rotation = (float)Math.PI / 2;
             }
+
+            
             base.Update(gameTime);
         }
 
-        // Draw methode van de explorerWalkUp
+
         public new void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);

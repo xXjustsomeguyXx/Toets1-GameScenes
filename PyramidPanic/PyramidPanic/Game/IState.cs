@@ -14,7 +14,6 @@ namespace PyramidPanic
 {
     public interface IState
     {
-        //Een interface van De update en draw!
         void Update(GameTime gameTime);
         void Draw(GameTime gameTime);
     }
