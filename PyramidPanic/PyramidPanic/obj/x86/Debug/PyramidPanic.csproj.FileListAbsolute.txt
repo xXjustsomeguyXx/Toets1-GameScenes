@@ -23,9 +23,13 @@ C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Treasures\Potion.xnb
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Scorpion\CollisionText.xnb
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Level\0.txt
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.exe.manifest
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.application
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.exe
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.pdb
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.csprojResolveAssemblyReference.cache
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.exe.manifest
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.application
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.exe
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.pdb

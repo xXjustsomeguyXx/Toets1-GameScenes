@@ -44,6 +44,14 @@ namespace PyramidPanic
             // kan lopen.
             this.explorer.Position += this.velocity;
 
+            // Als de explorer tegen een block instantie aanloopt waarvan
+            // de Passable property op false staat, kan hij er niet daarheen
+            if (ExplorerManager.CollisionDectectionExplorerWalls())
+            {
+                // Ze de explorer weer terug
+                this.explorer.Position -= this.velocity;
+            }
+
             if (this.explorer.Position.X > 640 - 16)
             {
                 //Breng de explorer in de toestand IdleWalk
@@ -56,11 +64,27 @@ namespace PyramidPanic
 
             // Als de Right knop wordt losgelaten, dan moet de 
             // explorer weer in de toestand Idle komen
-            if (Input.EdgeDetectKeyUp(Keys.Right))
+            if (Input.LevelDetectKeyUp(Keys.Right))
             {
-                this.explorer.State = this.explorer.Idle;
-                this.explorer.Idle.Effect = SpriteEffects.None;
-                this.explorer.Idle.Rotation = 0f;
+                // Bereken de modulo waarde 32 van de x-positie van de explorer
+                int modulo = (int)this.explorer.Position.X % 32;
+                //Console.WriteLine((int)this.explorer.Position.X);
+                //Console.WriteLine(modulo);
+
+                //Check of de modulo waarde al groter of gelijk aan 30 is
+                // Als dat niet geval is niet stoppen, anders wel stoppen
+                if (modulo >= 16 - this.explorer.Speed  && modulo <=16)
+                {
+                    // Zet de laatste stap op zijn grid
+                    int geheelAantalmalen32 = (int)(this.explorer.Position.X / 32);
+                    //Console.WriteLine(geheelAantalmalen32);
+                    this.explorer.Position = new Vector2((geheelAantalmalen32 + 1) * 32 - 16,
+                                                          this.explorer.Position.Y);
+                    
+                    this.explorer.State = this.explorer.Idle;
+                    this.explorer.Idle.Effect = SpriteEffects.None;
+                    this.explorer.Idle.Rotation = 0f;
+                }                
             }
             
             base.Update(gameTime);

@@ -21,7 +21,7 @@ namespace PyramidPanic
         private Color color = Color.White;
 
         //Maak een rectangle voor het detecteren van collisions
-        private Rectangle rectangle;
+        protected Rectangle rectangle;
 
         // Maak een variabele aan om de game instantie in op te slaan.
         private PyramidPanic game;

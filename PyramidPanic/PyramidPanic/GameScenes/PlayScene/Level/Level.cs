@@ -45,7 +45,7 @@ namespace PyramidPanic
         {
             get { return this.scorpions; }
         }
-        public List<Beetle> Beetle
+        public List<Beetle> Beetles
         {
             get { return this.beetles; }
         }
@@ -180,6 +180,8 @@ namespace PyramidPanic
 
             ScorpionManager.Level = this;
             BeetleManager.Level = this;
+            ExplorerManager.Level = this;
+            ExplorerManager.Explorer = this.explorer;
         }
 
         public Block LoadBlock(char blockElement, int x, int y)

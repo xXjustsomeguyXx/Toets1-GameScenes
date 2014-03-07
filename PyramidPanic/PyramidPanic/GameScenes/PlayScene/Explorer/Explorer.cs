@@ -20,6 +20,8 @@ namespace PyramidPanic
         private Texture2D texture;
         private int speed = 2;
         private Vector2 position;
+        private Rectangle collisionRect;
+        private Texture2D collisionText;
         
 
         //Maak van iedere toestand (state) een field
@@ -32,9 +34,10 @@ namespace PyramidPanic
         private ExplorerIdleWalk idleWalk;
 
         //properties
-        
-        
-        
+        public Rectangle CollisionRect
+        {
+            get { return this.collisionRect; }
+        }
         public ExplorerWalkDown WalkDown
         {
             get { return this.walkDown; }
@@ -64,6 +67,8 @@ namespace PyramidPanic
             get { return this.position; }
             set { 
                     this.position = value;
+                    this.collisionRect.X = (int)this.position.X - 16;
+                    this.collisionRect.Y = (int)this.position.Y - 16;
                     this.state.Initialize();
                 }
         }
@@ -93,7 +98,8 @@ namespace PyramidPanic
             this.game = game;
             this.position = position;
             this.texture = game.Content.Load<Texture2D>(@"Explorer\Explorer");
-            //this.walkUp = new ExplorerWalkUp(this);
+            this.collisionRect = new Rectangle((int)position.X - 16, (int)position.Y -16, 32, 32);
+            this.collisionText = this.game.Content.Load<Texture2D>(@"Scorpion\CollisionText");
             this.walkDown = new ExplorerWalkDown(this);
             this.walkUp = new ExplorerWalkUp(this);
             this.walkLeft = new ExplorerWalkLeft(this);
@@ -112,7 +118,8 @@ namespace PyramidPanic
         //Draw
         public void Draw(GameTime gameTime)
         {
-            this.state.Draw(gameTime);                   
+            this.state.Draw(gameTime);
+            //this.game.SpriteBatch.Draw(this.collisionText, this.collisionRect, new Color(255, 0, 0, 0));     
         }
     }
 }

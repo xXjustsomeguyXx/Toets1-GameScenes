@@ -14,24 +14,24 @@ namespace PyramidPanic
 {
     public class BeetleManager
     {
-        // Fields
+        //Fields
         private static Level level;
 
-        // Property
+        // Properties
         public static Level Level
         {
-            set
-            {
-                level = value;
-                CollisionDetectBeetleDown();
-            }
+            set { 
+                    level = value;
+                    CollisionDetectBeetleDown();
+                    CollisionDetectBeetleUp();   
+                }
         }
 
         public static void CollisionDetectBeetleDown()
         {
-            foreach (Beetle beetle in level.Beetle)
+            foreach (Beetle beetle in level.Beetles)
             {
-                for (int j = (int)(beetle.Position.Y / 32); j <= 20; j++)
+                for (int j = (int)(beetle.Position.Y / 32); j <= 15; j++)
                 {
                     if (level.Blocks[(int)(beetle.Position.X / 32), j].Passable == false)
                     {
@@ -41,10 +41,10 @@ namespace PyramidPanic
                 }
             }
         }
-        
+
         public static void CollisionDetectBeetleUp()
         {
-            foreach (Beetle beetle in level.Beetle)
+            foreach (Beetle beetle in level.Beetles)
             {
                 for (int j = (int)(beetle.Position.Y / 32); j >= 0; j--)
                 {
@@ -55,8 +55,6 @@ namespace PyramidPanic
                     }
                 }
             }
-        }
-         
-
+        } 
     }
 }

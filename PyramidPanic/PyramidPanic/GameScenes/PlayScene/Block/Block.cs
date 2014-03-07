@@ -21,6 +21,10 @@ namespace PyramidPanic
         {
             get { return passable; }
         }
+        public Rectangle Rectangle
+        {
+            get { return this.rectangle; }
+        }
 
         //Constructor
         public Block(PyramidPanic game, string pathNameAsset, Vector2 position, bool passable ) 

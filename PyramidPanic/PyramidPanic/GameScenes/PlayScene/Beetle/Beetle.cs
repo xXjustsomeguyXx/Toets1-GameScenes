@@ -26,7 +26,6 @@ namespace PyramidPanic
         //Maak van iedere toestand (state) een field
         private WalkUp walkUp;
         private WalkDown walkDown;
-        
 
         //properties
         public WalkUp WalkUp
@@ -60,7 +59,7 @@ namespace PyramidPanic
         }
         public int BottomBorder
         {
-            get { return this.bottomBorder;  }
+            get { return this.bottomBorder; }
             set { this.bottomBorder = value; }
         }
         public int TopBorder
