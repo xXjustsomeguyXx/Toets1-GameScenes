@@ -38,8 +38,8 @@ namespace PyramidPanic
 
         }
 
-
         // Methods
+        // CollisionDetection tussen muren en explorer
         public static bool CollisionDectectionExplorerWalls()
         {
            // Doorloop het tweedimensionale Blocksarray en ....
@@ -67,5 +67,17 @@ namespace PyramidPanic
             return false;
         }
 
+        // CollisionDetection tussen treasures en explorer
+        public static void CollisionDetectTreasures()
+        {
+            foreach (Image image in level.Treasures)
+            {
+                if (explorer.CollisionRect.Intersects(image.Rectangle))
+                {
+                    level.Treasures.Remove(image);
+                    break;
+                }
+            }
+        }
     }
 }

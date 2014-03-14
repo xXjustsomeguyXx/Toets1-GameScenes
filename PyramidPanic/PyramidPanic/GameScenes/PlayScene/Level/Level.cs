@@ -25,6 +25,7 @@ namespace PyramidPanic
         private Image background;
         private Explorer explorer;
         private List<Scorpion> scorpions;
+        private Panel panel;
 
         // In deze list worden de beetles opgeslagen
         private List<Beetle> beetles;
@@ -33,6 +34,10 @@ namespace PyramidPanic
         private List<Image> treasures;
 
         // Properties
+        public List<Image> Treasures
+        {
+            get { return this.treasures; }
+        }
         public PyramidPanic Game
         {
             get { return this.game; }
@@ -53,6 +58,7 @@ namespace PyramidPanic
         {
             get { return this.blocks; }
         }
+
 
         // Constructor
         public Level(PyramidPanic game, int levelIndex)
@@ -100,6 +106,8 @@ namespace PyramidPanic
                     this.blocks[column, row].Draw(gameTime);
                 }
             }
+            // Teken het panel
+            this.panel.Draw(gameTime);
            
             // Teken alle Image objecten in de treasureslist
             foreach (Image treasure in this.treasures)
@@ -224,6 +232,9 @@ namespace PyramidPanic
                 case '@':
                     this.background = new Image(this.game, @"Background\Background2", new Vector2(x, y));
                     return new Block(this.game, @"Block\Block", new Vector2(x, y), false);
+                case 'P':
+                    this.panel = new Panel(this.game, new Vector2(x, y));
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
                 case '.':
                     return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
                 default:

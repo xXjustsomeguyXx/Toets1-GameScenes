@@ -113,6 +113,7 @@ namespace PyramidPanic
         public void Update(GameTime gameTime)
         {
            this.state.Update(gameTime);
+           ExplorerManager.CollisionDetectTreasures();
         }
 
         //Draw

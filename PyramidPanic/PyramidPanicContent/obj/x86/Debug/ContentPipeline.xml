@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartScene\Background.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>StartScene\Title.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartScene\Title.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>StartScene\Button_help.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartScene\Button_help.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>StartScene\Button_load.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartScene\Button_load.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>StartScene\Button_scores.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartScene\Button_scores.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>StartScene\Button_quit.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartScene\Button_quit.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>StartScene\Button_start.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\StartScene\Button_start.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Scorpion\Scorpion.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Scorpion\Scorpion.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Beetle\Beetle.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Beetle\Beetle.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Explorer\Explorer.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Explorer\Explorer.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Block\Block.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Block\Block_hor.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block_hor.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Block\Block_vert.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Block_vert.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Block\Door.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Door.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Block\Wall1.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Wall1.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Block\Wall2.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Wall2.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Block\Transparant.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Block\Transparant.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Background\Background.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Background\Background.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Background\Background2.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Background\Background2.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Treasures\Ankh.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Treasures\Ankh.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Treasures\Cat.png</Source>
@@ -188,7 +188,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Treasures\Cat.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Treasures\Scarab.png</Source>
@@ -197,7 +197,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Treasures\Scarab.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Treasures\Potion.png</Source>
@@ -206,7 +206,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Treasures\Potion.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <Item>
       <Source>Scorpion\CollisionText.png</Source>
@@ -215,7 +215,52 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Scorpion\CollisionText.xnb</Output>
-      <Time>2014-03-07T02:26:54+01:00</Time>
+      <Time>2014-03-07T05:34:18+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Panel\Panel.png</Source>
+      <Name>Panel\Panel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Panel\Panel.xnb</Output>
+      <Time>2014-03-07T05:34:18+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Panel\Lives.png</Source>
+      <Name>Panel\Lives</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Panel\Lives.xnb</Output>
+      <Time>2014-03-07T05:34:18+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Panel\Scarab.png</Source>
+      <Name>Panel\Scarab</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Panel\Scarab.xnb</Output>
+      <Time>2014-03-07T05:34:18+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Arial.spritefont</Source>
+      <Name>Fonts\Arial</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Fonts\Arial.xnb</Output>
+      <Time>2014-03-07T05:34:18+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\ComicSansMS.spritefont</Source>
+      <Name>Fonts\ComicSansMS</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Fonts\ComicSansMS.xnb</Output>
+      <Time>2014-03-07T05:34:18+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

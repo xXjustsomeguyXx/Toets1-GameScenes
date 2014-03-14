@@ -22,4 +22,9 @@ Content\Treasures\Cat.xnb
 Content\Treasures\Scarab.xnb
 Content\Treasures\Potion.xnb
 Content\Scorpion\CollisionText.xnb
+Content\Panel\Panel.xnb
+Content\Panel\Lives.xnb
+Content\Panel\Scarab.xnb
+Content\Fonts\Arial.xnb
+Content\Fonts\ComicSansMS.xnb
 Content\Level\0.txt

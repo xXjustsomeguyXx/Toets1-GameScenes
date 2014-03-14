@@ -147,6 +147,7 @@
     <Compile Include="GameScenes\PlayScene\IEntityState.cs" />
     <Compile Include="GameScenes\PlayScene\Beetle\WalkUp.cs" />
     <Compile Include="GameScenes\PlayScene\Level\Level.cs" />
+    <Compile Include="GameScenes\PlayScene\Panel\Panel.cs" />
     <Compile Include="GameScenes\PlayScene\PlayScene.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\ScorpionManager.cs" />
     <Compile Include="GameScenes\PlayScene\Scorpion\WalkRight.cs" />

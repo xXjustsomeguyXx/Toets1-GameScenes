@@ -22,6 +22,11 @@ C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Treasures\Scarab.xnb
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Treasures\Potion.xnb
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Scorpion\CollisionText.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Panel\Panel.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Panel\Lives.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Panel\Scarab.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Fonts\Arial.xnb
+C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Fonts\ComicSansMS.xnb
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Level\0.txt
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.exe.manifest
 C:\Users\roy\Documents\Visual Studio 2010\Projects\Blok 2\Toets1 16-12-2013\am1a-pyramidpanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.application
