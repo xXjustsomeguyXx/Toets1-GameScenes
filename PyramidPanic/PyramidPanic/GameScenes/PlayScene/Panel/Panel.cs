@@ -28,9 +28,9 @@ namespace PyramidPanic
             // Maak een instantie van de List<Image>
             this.images = new List<Image>();
 
-            this.images.Add(new Image(game, @"Panel\Panel", position));
-            this.images.Add(new Image(game, @"Panel\Scarab", position + new Vector2(8 * 32f, 0f)));
-            this.images.Add(new Image(game, @"Panel\Lives", position + new Vector2(3 * 32f, 0f)));
+            this.images.Add(new Image(game, @"Panel\Panel", position, 'P'));
+            this.images.Add(new Image(game, @"Panel\Scarab", position + new Vector2(8 * 32f, 0f), 'P'));
+            this.images.Add(new Image(game, @"Panel\Lives", position + new Vector2(3 * 32f, 0f), 'P'));
 
             this.arial = game.Content.Load<SpriteFont>(@"Fonts\Arial");
             this.comicSansMS = game.Content.Load<SpriteFont>(@"Fonts\ComicSansMS");
@@ -45,15 +45,15 @@ namespace PyramidPanic
                 image.Draw(gameTime);
             }
             this.game.SpriteBatch.DrawString(this.arial,
-                                             "1",
+                                             Score.Lives.ToString(),
                                              this.position + new Vector2(4.3f * 32f, 0f),
                                              Color.Yellow);
             this.game.SpriteBatch.DrawString(this.arial,
-                                             "2",
+                                             Score.Scarab.ToString(),
                                              this.position + new Vector2(9.3f * 32f, 0f),
                                              Color.Yellow);
             this.game.SpriteBatch.DrawString(this.arial,
-                                             "400",
+                                             Score.Points.ToString(),
                                              this.position + new Vector2(17.3f * 32f, 0f),
                                              Color.Yellow);
         }

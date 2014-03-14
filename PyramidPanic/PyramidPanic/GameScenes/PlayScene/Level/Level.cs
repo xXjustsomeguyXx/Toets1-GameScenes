@@ -198,47 +198,47 @@ namespace PyramidPanic
             {
                 case 's':
                     this.scorpions.Add(new Scorpion(this.game, new Vector2(x + 16f, y + 16f)));
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 case 'b':
                     this.beetles.Add(new Beetle(this.game, new Vector2(x + 16f, y + 16f)));
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 case 'c':
-                    this.treasures.Add(new Image(this.game, @"Treasures\Cat", new Vector2(x, y)));
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
+                    this.treasures.Add(new Image(this.game, @"Treasures\Cat", new Vector2(x, y), 'c'));
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 case 'a':
-                    this.treasures.Add(new Image(this.game, @"Treasures\Ankh", new Vector2(x, y)));
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
+                    this.treasures.Add(new Image(this.game, @"Treasures\Ankh", new Vector2(x, y), 'a'));
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 case 'S':
-                    this.treasures.Add(new Image(this.game, @"Treasures\Scarab", new Vector2(x, y)));
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
+                    this.treasures.Add(new Image(this.game, @"Treasures\Scarab", new Vector2(x, y), 'S'));
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 case 'p':
-                    this.treasures.Add(new Image(this.game, @"Treasures\potion", new Vector2(x, y)));
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
+                    this.treasures.Add(new Image(this.game, @"Treasures\potion", new Vector2(x, y), 'p'));
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 case 'E':
                     this.explorer = new Explorer(this.game, new Vector2(x + 16f, y + 16f));
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);                
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');                
                 case 'x':
-                    return new Block(this.game, @"Block\Block", new Vector2(x, y), false);
+                    return new Block(this.game, @"Block\Block", new Vector2(x, y), false, 'x');
                 case 'y':
-                    return new Block(this.game, @"Block\Wall1", new Vector2(x, y), false);
+                    return new Block(this.game, @"Block\Wall1", new Vector2(x, y), false, 'y');
                 case 'z':
-                    return new Block(this.game, @"Block\Wall2", new Vector2(x, y), false);
+                    return new Block(this.game, @"Block\Wall2", new Vector2(x, y), false, 'z');
                 case 'v':
-                    return new Block(this.game, @"Block\Block_hor", new Vector2(x, y), false);
+                    return new Block(this.game, @"Block\Block_hor", new Vector2(x, y), false, 'v');
                 case 'w':
-                    return new Block(this.game, @"Block\Block_vert", new Vector2(x, y), false);
+                    return new Block(this.game, @"Block\Block_vert", new Vector2(x, y), false, 'w');
                 case 'u':
-                    return new Block(this.game, @"Block\Door", new Vector2(x, y), false);
+                    return new Block(this.game, @"Block\Door", new Vector2(x, y), false, 'u');
                 case '@':
-                    this.background = new Image(this.game, @"Background\Background2", new Vector2(x, y));
-                    return new Block(this.game, @"Block\Block", new Vector2(x, y), false);
+                    this.background = new Image(this.game, @"Background\Background2", new Vector2(x, y), '@');
+                    return new Block(this.game, @"Block\Block", new Vector2(x, y), false, 'x');
                 case 'P':
                     this.panel = new Panel(this.game, new Vector2(x, y));
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 case '.':
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true);
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 default:
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true );
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.' );
             }
         }
     }

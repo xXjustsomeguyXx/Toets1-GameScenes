@@ -22,6 +22,7 @@ namespace PyramidPanic
         private Vector2 position;
         private int bottomBorder;
         private int topBorder;
+        private Rectangle collisionRect;
 
         //Maak van iedere toestand (state) een field
         private WalkUp walkUp;
@@ -35,6 +36,14 @@ namespace PyramidPanic
         public WalkDown WalkDown
         {
             get { return this.walkDown; }
+        }
+        public Rectangle CollisionRect
+        {
+            get
+            {
+                this.collisionRect.Y = (int)this.position.Y - 16;
+                return this.collisionRect;
+            }
         }
         public Vector2 Position
         {
@@ -73,6 +82,10 @@ namespace PyramidPanic
         {
             this.game = game;
             this.position = position;
+            this.collisionRect = new Rectangle((int)this.position.X - 16,
+                                               (int)this.position.Y - 16,
+                                               32,
+                                               32);
             this.texture = game.Content.Load<Texture2D>(@"Beetle\Beetle");
             this.walkUp = new WalkUp(this);
             this.walkDown = new WalkDown(this);

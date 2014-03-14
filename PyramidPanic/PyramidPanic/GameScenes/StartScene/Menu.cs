@@ -53,11 +53,11 @@ namespace PyramidPanic
         {
             // Maak een instantie aan van de List<Image> type en stop deze in de variabele this.buttonList
             this.buttonList = new List<Image>();
-            this.buttonList.Add(this.start = new Image(this.game, @"StartScene\Button_start", new Vector2(this.top, this.bottom)));
-            this.buttonList.Add(this.load = new Image(this.game, @"StartScene\Button_load", new Vector2(this.top + 1 * this.space, this.bottom)));
-            this.buttonList.Add(this.help = new Image(this.game, @"StartScene\Button_help", new Vector2(this.top + 2 * this.space, this.bottom)));
-            this.buttonList.Add(this.scores = new Image(this.game, @"StartScene\Button_scores", new Vector2(this.top + 3 * this.space, this.bottom)));
-            this.buttonList.Add(this.quit = new Image(this.game, @"StartScene\Button_quit", new Vector2(this.top + 4 * this.space, this.bottom)));
+            this.buttonList.Add(this.start = new Image(this.game, @"StartScene\Button_start", new Vector2(this.top, this.bottom), '!'));
+            this.buttonList.Add(this.load = new Image(this.game, @"StartScene\Button_load", new Vector2(this.top + 1 * this.space, this.bottom), '!'));
+            this.buttonList.Add(this.help = new Image(this.game, @"StartScene\Button_help", new Vector2(this.top + 2 * this.space, this.bottom), '!'));
+            this.buttonList.Add(this.scores = new Image(this.game, @"StartScene\Button_scores", new Vector2(this.top + 3 * this.space, this.bottom), '!'));
+            this.buttonList.Add(this.quit = new Image(this.game, @"StartScene\Button_quit", new Vector2(this.top + 4 * this.space, this.bottom), '!'));
         }
 
 

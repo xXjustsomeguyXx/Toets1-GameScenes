@@ -46,8 +46,8 @@ namespace PyramidPanic
         public void LoadContent()
         {
             // Nu maken we twee objecten (instanties) van de class Image
-            this.background = new Image(this.game, @"StartScene\Background", Vector2.Zero);
-            this.title = new Image(this.game, @"StartScene\Title", new Vector2(100f, 30f));
+            this.background = new Image(this.game, @"StartScene\Background", Vector2.Zero, '!');
+            this.title = new Image(this.game, @"StartScene\Title", new Vector2(100f, 30f), '!');
             this.menu = new Menu(this.game);
         }
 

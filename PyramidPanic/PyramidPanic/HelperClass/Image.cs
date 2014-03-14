@@ -26,6 +26,10 @@ namespace PyramidPanic
         // Maak een variabele aan om de game instantie in op te slaan.
         private PyramidPanic game;
 
+        //Maak een variabele aan om de character in op te slaan 
+        private Char character;
+
+
         #region Properties
         // Maak een property voor het color field
         public Color Color
@@ -39,13 +43,20 @@ namespace PyramidPanic
         {
             get { return this.rectangle; }
         }
+
+        // Maak een property voor het character field
+        public Char Character
+        {
+            get { return this.character; }
+        }
         #endregion
 
         //Constructor
-        public Image(PyramidPanic game, string pathNameAsset, Vector2 position)
+        public Image(PyramidPanic game, string pathNameAsset, Vector2 position, Char character)
         {
             this.game = game;
             this.texture = game.Content.Load<Texture2D>(pathNameAsset);
+            this.character = character;
             this.rectangle = new Rectangle((int)position.X,
                                            (int)position.Y,
                                            this.texture.Width,
