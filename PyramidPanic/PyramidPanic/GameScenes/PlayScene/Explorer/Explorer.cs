@@ -114,8 +114,8 @@ namespace PyramidPanic
         {
            this.state.Update(gameTime);
            ExplorerManager.CollisionDetectTreasures();
-           ExplorerManager.CollisionDetectionScorpions();
-           ExplorerManager.CollisionDetectionBeetles();
+           ExplorerManager.CollisionDetectScorpions();
+           ExplorerManager.CollisionDetectBeetles();
         }
 
         //Draw

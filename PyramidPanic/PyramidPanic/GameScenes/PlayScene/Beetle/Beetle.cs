@@ -22,11 +22,12 @@ namespace PyramidPanic
         private Vector2 position;
         private int bottomBorder;
         private int topBorder;
-        private Rectangle collisionRect;
 
         //Maak van iedere toestand (state) een field
         private WalkUp walkUp;
         private WalkDown walkDown;
+
+        private Rectangle collisionRect;
 
         //properties
         public WalkUp WalkUp
@@ -36,14 +37,6 @@ namespace PyramidPanic
         public WalkDown WalkDown
         {
             get { return this.walkDown; }
-        }
-        public Rectangle CollisionRect
-        {
-            get
-            {
-                this.collisionRect.Y = (int)this.position.Y - 16;
-                return this.collisionRect;
-            }
         }
         public Vector2 Position
         {
@@ -76,7 +69,16 @@ namespace PyramidPanic
             get { return this.topBorder; }
             set { this.topBorder = value; }
         }
-        
+        public Rectangle CollisionRect
+        {
+            get
+            {
+                this.collisionRect.Y = (int)this.position.Y - 16;
+                return this.collisionRect; 
+            }
+        }
+
+
         //Constructor
         public Beetle(PyramidPanic game, Vector2 position)
         {

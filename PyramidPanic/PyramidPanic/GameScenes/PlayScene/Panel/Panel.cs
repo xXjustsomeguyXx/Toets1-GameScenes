@@ -49,7 +49,7 @@ namespace PyramidPanic
                                              this.position + new Vector2(4.3f * 32f, 0f),
                                              Color.Yellow);
             this.game.SpriteBatch.DrawString(this.arial,
-                                             Score.Scarab.ToString(),
+                                             Score.Scarabs.ToString(),
                                              this.position + new Vector2(9.3f * 32f, 0f),
                                              Color.Yellow);
             this.game.SpriteBatch.DrawString(this.arial,

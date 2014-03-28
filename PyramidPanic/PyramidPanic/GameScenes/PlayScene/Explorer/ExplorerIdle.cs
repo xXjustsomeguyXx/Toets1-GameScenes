@@ -14,14 +14,14 @@ namespace PyramidPanic
 {
     // Dit is een toestands class (dus moet hij de interface implementeren)
     // Deze class belooft dan plechtig dat hij de methods uit de interface heeft (toepast)
-    
+
     public class ExplorerIdle : AnimatedSprite, IEntityState
     {
         //Fields
         private Explorer explorer;
         private Vector2 velocity;
         private int imageNumber = 1;
-       
+
         //properties
         public SpriteEffects Effect
         {
@@ -34,7 +34,8 @@ namespace PyramidPanic
         }
 
         //Constructor
-        public ExplorerIdle(Explorer explorer) : base(explorer)
+        public ExplorerIdle(Explorer explorer)
+            : base(explorer)
         {
             this.explorer = explorer;
             this.destinationRectangle = new Rectangle((int)this.explorer.Position.X,
@@ -76,7 +77,7 @@ namespace PyramidPanic
                 this.explorer.State = this.explorer.WalkUp;
                 this.explorer.WalkUp.Initialize();
             }
-            
+
 
             this.explorer.Position += this.velocity;
             this.destinationRectangle.X = (int)this.explorer.Position.X;

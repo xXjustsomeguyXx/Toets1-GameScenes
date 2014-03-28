@@ -40,6 +40,7 @@ namespace PyramidPanic
 
         public new void Update(GameTime gameTime)
         {
+                
             // Deze code zorgt ervoor dat de explorer niet buiten de rechterrand
             // kan lopen.
             this.explorer.Position += this.velocity;
@@ -73,18 +74,18 @@ namespace PyramidPanic
 
                 //Check of de modulo waarde al groter of gelijk aan 30 is
                 // Als dat niet geval is niet stoppen, anders wel stoppen
-                if (modulo >= 16 - this.explorer.Speed  && modulo <=16)
+                if (modulo >= 16 - this.explorer.Speed && modulo <= 16)
                 {
                     // Zet de laatste stap op zijn grid
                     int geheelAantalmalen32 = (int)(this.explorer.Position.X / 32);
                     //Console.WriteLine(geheelAantalmalen32);
                     this.explorer.Position = new Vector2((geheelAantalmalen32 + 1) * 32 - 16,
                                                           this.explorer.Position.Y);
-                    
+
                     this.explorer.State = this.explorer.Idle;
                     this.explorer.Idle.Effect = SpriteEffects.None;
                     this.explorer.Idle.Rotation = 0f;
-                }                
+                }
             }
             
             base.Update(gameTime);

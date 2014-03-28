@@ -26,9 +26,8 @@ namespace PyramidPanic
         // Maak een variabele aan om de game instantie in op te slaan.
         private PyramidPanic game;
 
-        //Maak een variabele aan om de character in op te slaan 
+        // Maak een variabele aan om de character in op te slaan
         private Char character;
-
 
         #region Properties
         // Maak een property voor het color field

@@ -12,7 +12,9 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-  public class ScoreScene
+    public interface ILevel
     {
+        void Update(GameTime gameTime);
+        void Draw(GameTime gameTime);
     }
 }

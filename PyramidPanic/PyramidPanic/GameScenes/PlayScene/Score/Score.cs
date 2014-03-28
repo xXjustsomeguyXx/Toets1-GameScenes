@@ -12,29 +12,40 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-   public class Score
+    public class Score
     {
-       //Fields
-       private static int points = 0;
-       private static int scarab = 0;
-       private static int lives = 3;
+        //Fields
+        private static int points = 0;
+        private static int scarabs = 0;
+        private static int lives = 3;
+
+        //maak een static method genaamt initialize() die potions = 0 en scarabs = 0
+        //en lives =3initialiseerd. deze method roep je static aan: Score.initialize();
+
+        public static void initialize()
+        {
+            points = 0;
+            scarabs = 0;
+            lives = 3;
+        }
 
 
-       //Properties
-       public static int Points
-       {
-           get { return points; }
-           set { points = value; }
-       }
-       public static int Scarab
-       {
-           get { return scarab; }
-           set { scarab = value; }
-       }
-       public static int Lives
-       {
-           get { return lives; }
-           set { lives = value; }
-       }
+
+        // Properties
+        public static int Points
+        {
+            get { return points; }
+            set { points = value; }
+        }
+        public static int Scarabs
+        {
+            get { return scarabs; }
+            set { scarabs = value; }
+        }
+        public static int Lives
+        {
+            get { return lives; }
+            set { lives = value; }
+        }
     }
 }

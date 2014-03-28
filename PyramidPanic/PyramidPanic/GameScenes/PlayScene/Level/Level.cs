@@ -26,6 +26,10 @@ namespace PyramidPanic
         private Explorer explorer;
         private List<Scorpion> scorpions;
         private Panel panel;
+        private ILevel state;
+        private LevelPause pause;
+        private LevelPlay play;
+        private LevelGameOver gameOver;
 
         // In deze list worden de beetles opgeslagen
         private List<Beetle> beetles;
@@ -34,6 +38,33 @@ namespace PyramidPanic
         private List<Image> treasures;
 
         // Properties
+        // Maak een property voor de Explorer
+        public Explorer Explorer
+        {
+            get { return this.explorer; }
+        }
+
+        // Maak een property voor de state field
+        public ILevel State
+        {
+            get { return this.state;  }
+            set { this.state = value; }
+        }
+        public LevelPause Pause
+        {
+            get { return this.pause; }
+            set { this.pause = value; }
+        }
+        public LevelPlay Play
+        {
+            get { return this.play; }
+            set { this.play = value; }
+        }
+        public LevelGameOver GameOver
+        {
+            get { return this.gameOver; }
+        }
+
         public List<Image> Treasures
         {
             get { return this.treasures; }
@@ -65,30 +96,28 @@ namespace PyramidPanic
         {
             this.game = game;
             this.levelIndex = levelIndex;
-
-            //Laad het textbestand met behulp van een stream object
-            this.stream = TitleContainer.OpenStream(@"Content\Level\0.txt");
-            this.LoadAssets();
+            this.pause = new LevelPause(this);
+            this.play = new LevelPlay(this);
+            this.gameOver = new LevelGameOver(this);
+            this.state = this.play;
+            this.Initialize(levelIndex);
         }
 
+        public void Initialize(int levelIndex)
+        {
+            //Laad het textbestand met behulp van een stream object
+            this.stream = TitleContainer.OpenStream(@"Content\Level\" +levelIndex + "0.txt");
+            this.LoadAssets();
+        }
 
         // Update
         public void Update(GameTime gameTime)
         {
-            // We roepen de Update-method aan van de Scorpion-objecten
-            foreach (Scorpion scorpion in this.scorpions)
+            if (Score.Lives == 0)
             {
-                scorpion.Update(gameTime);
+                this.state = this.gameOver;
             }
-
-            // We roepen de Update-method aan van de Beetle-class
-            foreach (Beetle beetle in this.beetles)
-            {
-                beetle.Update(gameTime);
-            }
-            
-            // We roepen de Update method aan van de explorer zodat hij gaat bewegen
-            this.explorer.Update(gameTime);
+            this.state.Update(gameTime);
         }
 
 
@@ -129,6 +158,7 @@ namespace PyramidPanic
 
             // De explorer wordt getekend
             this.explorer.Draw(gameTime);
+            this.state.Draw(gameTime);
         }
 
         private void LoadAssets()
@@ -238,7 +268,7 @@ namespace PyramidPanic
                 case '.':
                     return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
                 default:
-                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.' );
+                    return new Block(this.game, @"Block\Transparant", new Vector2(x, y), true, '.');
             }
         }
     }

@@ -27,7 +27,7 @@ namespace PyramidPanic
         }
 
         //Constructor
-        public Block(PyramidPanic game, string pathNameAsset, Vector2 position, bool passable, Char character) 
+        public Block(PyramidPanic game, string pathNameAsset, Vector2 position, bool passable, Char character ) 
             : base(game, pathNameAsset, position, character)
         {
             this.passable = passable;

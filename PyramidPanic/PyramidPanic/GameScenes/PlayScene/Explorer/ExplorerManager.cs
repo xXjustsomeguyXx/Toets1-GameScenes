@@ -79,60 +79,74 @@ namespace PyramidPanic
                     {
                         case 'c':
                             Score.Points += 100;
-                        break;
-
+                            break;
                         case 'a':
                             Score.Points += 10;
-                        break;
-
+                            break;
                         case 'S':
                             Score.Points += 50;
-                            Score.Scarab += 1;
-                        break;
-
+                            Score.Scarabs += 1;
+                            break;
                         case 'p':
                             Score.Lives += 1;
-                        break;
-
-
+                            break;
+                    }
+                    break;
+                }
+            }
+        }
+    
+        // CollisionDetection tussen de explorer en de Scorpions
+        public static void CollisionDetectScorpions()
+        {
+            foreach (Scorpion scorpion in level.Scorpions)
+            {
+                if (explorer.CollisionRect.Intersects(scorpion.CollisionRect))
+                {
+                    if (level.State.Equals(level.Play))
+                    {
+                        level.State = level.Pause;
+                    }
+                    else
+                    {
+                        level.Scorpions.Remove(scorpion);
+                        Score.Lives--;
+                        explorer.Position = new Vector2(10 * 32f - 16, 7 * 32f - 16);
+                        explorer.State = explorer.Idle;
+                        explorer.Idle.Initialize();
+                        explorer.Idle.Rotation = 0f;
+                        explorer.Idle.Effect = SpriteEffects.None;
                     }
                     break;
                 }
             }
         }
 
-        // CollisionDetection tussen de explorer en de Scorpions
-
-        public static void CollisionDetectionScorpions()
+        // CollisionDetection tussen de explorer en de Beetles
+        public static void CollisionDetectBeetles()
         {
-            foreach( Scorpion Scorpion in level.Scorpions)
+            foreach (Beetle beetle in level.Beetles)
             {
-                if (explorer.CollisionRect.Intersects(Scorpion.CollisionRect))
+                if (explorer.CollisionRect.Intersects(beetle.CollisionRect))
                 {
-                    level.Scorpions.Remove(Scorpion);
-                    Score.Lives--;
-                    explorer.Position = new Vector2(10 * 32f - 16, 7 * 32f - 16);
+                    if (level.State.Equals(level.Play))
+                    {
+                        level.State = level.Pause;
+                    }
+                    else
+                    {
+                        level.Beetles.Remove(beetle);
+                        Score.Lives--;
+                        explorer.Position = new Vector2(10 * 32f - 16, 7 * 32f - 16);
+                        explorer.State = explorer.Idle;
+                        explorer.Idle.Initialize();
+                        explorer.Idle.Rotation = 0f;
+                        explorer.Idle.Effect = SpriteEffects.None;
+                    }
                     break;
                 }
             }
-
-        }
-
-        //collision detection tussen de explorer en de beetles
-
-        public static void CollisionDetectionBeetles()
-        {
-            foreach (Beetle Beetle in level.Beetles)
-            {
-                if (explorer.CollisionRect.Intersects(Beetle.CollisionRect))
-                {
-                    level.Beetles.Remove(Beetle);
-                    Score.Lives--;
-                    explorer.Position = new Vector2(10 * 32f - 16, 7 * 32f - 16);
-                    break;
-                }
-            }
-
-        }
+        }   
+    
     }
 }
